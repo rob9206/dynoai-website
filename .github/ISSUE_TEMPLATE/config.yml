@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: General Questions
+    url: mailto:info@dynoai.com
+    about: For general questions, please email us directly
+  - name: Request a Demo
+    url: https://dynoai.com/#contact
+    about: Interested in DynoAI? Request a demo on our website

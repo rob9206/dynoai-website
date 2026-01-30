@@ -1,0 +1,16 @@
+# CODEOWNERS file for DynoAI Landing Page
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owner for everything in the repository
+* @dawso
+
+# Core page files
+index.html @dawso
+styles.css @dawso
+article-styles.css @dawso
+
+# GitHub configuration
+.github/ @dawso
+
+# Documentation
+*.md @dawso
