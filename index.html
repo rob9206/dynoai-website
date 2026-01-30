@@ -38,81 +38,181 @@
             <div class="hero-image">
                 <!-- DynoAI Interface Mockup -->
                 <div class="interface-mockup">
-                    <div class="mockup-header">
-                        <div class="mockup-title">DynoAI Dashboard</div>
-                        <div class="mockup-status">
-                            <span class="status-dot"></span>
-                            <span>Live</span>
+                    <div class="mockup-titlebar">
+                        <div class="window-controls">
+                            <span class="win-btn close"></span>
+                            <span class="win-btn minimize"></span>
+                            <span class="win-btn maximize"></span>
+                        </div>
+                        <div class="titlebar-text">DynoAI Pro v2.4.1 — Session: 2026-01-28_WOT_Run3</div>
+                    </div>
+                    <div class="mockup-toolbar">
+                        <div class="toolbar-group">
+                            <button class="toolbar-btn">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3z"/><path d="M12 8v8M8 12h8"/></svg>
+                                New
+                            </button>
+                            <button class="toolbar-btn">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Import
+                            </button>
+                            <button class="toolbar-btn">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                                Export PVV
+                            </button>
+                        </div>
+                        <div class="toolbar-group">
+                            <div class="connection-status connected">
+                                <span class="status-indicator"></span>
+                                JetDrive Connected
+                            </div>
                         </div>
                     </div>
                     <div class="mockup-body">
                         <div class="mockup-sidebar">
-                            <div class="sidebar-item active">VE Surface</div>
-                            <div class="sidebar-item">Spark Map</div>
-                            <div class="sidebar-item">Knock Analysis</div>
-                            <div class="sidebar-item">Diagnostics</div>
+                            <div class="sidebar-section">
+                                <div class="sidebar-heading">Analysis</div>
+                                <div class="sidebar-item active">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                                    VE Surface
+                                </div>
+                                <div class="sidebar-item">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                                    Spark Map
+                                </div>
+                                <div class="sidebar-item">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+                                    Knock Detection
+                                </div>
+                            </div>
+                            <div class="sidebar-section">
+                                <div class="sidebar-heading">Diagnostics</div>
+                                <div class="sidebar-item">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                                    Cause Tree
+                                </div>
+                                <div class="sidebar-item">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                                    Test Planner
+                                </div>
+                            </div>
+                            <div class="sidebar-section">
+                                <div class="sidebar-heading">Cylinder</div>
+                                <div class="cylinder-toggle">
+                                    <button class="cyl-btn active">Front</button>
+                                    <button class="cyl-btn">Rear</button>
+                                    <button class="cyl-btn">Both</button>
+                                </div>
+                            </div>
                         </div>
                         <div class="mockup-main">
+                            <div class="panel-header">
+                                <div class="panel-title">VE Correction Surface</div>
+                                <div class="panel-actions">
+                                    <span class="panel-badge">11×9 Grid</span>
+                                    <span class="panel-badge hits">78 Hits</span>
+                                </div>
+                            </div>
                             <div class="mockup-chart">
-                                <div class="chart-title">VE Correction Map (RPM × MAP)</div>
-                                <div class="ve-grid">
-                                    <div class="ve-cell" style="--val: 0.2"></div>
-                                    <div class="ve-cell" style="--val: 0.3"></div>
-                                    <div class="ve-cell" style="--val: 0.5"></div>
-                                    <div class="ve-cell" style="--val: 0.6"></div>
-                                    <div class="ve-cell" style="--val: 0.7"></div>
-                                    <div class="ve-cell" style="--val: 0.8"></div>
-                                    <div class="ve-cell" style="--val: 0.3"></div>
-                                    <div class="ve-cell" style="--val: 0.4"></div>
-                                    <div class="ve-cell" style="--val: 0.6"></div>
-                                    <div class="ve-cell" style="--val: 0.8"></div>
-                                    <div class="ve-cell" style="--val: 0.9"></div>
-                                    <div class="ve-cell" style="--val: 1.0"></div>
-                                    <div class="ve-cell" style="--val: 0.4"></div>
-                                    <div class="ve-cell" style="--val: 0.5"></div>
-                                    <div class="ve-cell" style="--val: 0.7"></div>
-                                    <div class="ve-cell" style="--val: 0.9"></div>
-                                    <div class="ve-cell" style="--val: 0.85"></div>
-                                    <div class="ve-cell" style="--val: 0.75"></div>
-                                    <div class="ve-cell" style="--val: 0.5"></div>
-                                    <div class="ve-cell" style="--val: 0.6"></div>
-                                    <div class="ve-cell" style="--val: 0.8"></div>
-                                    <div class="ve-cell" style="--val: 0.7"></div>
-                                    <div class="ve-cell" style="--val: 0.6"></div>
-                                    <div class="ve-cell" style="--val: 0.5"></div>
+                                <div class="axis-label y-axis">MAP (kPa)</div>
+                                <div class="chart-container">
+                                    <div class="ve-grid">
+                                        <div class="ve-cell" style="--val: 0.15"><span>98</span></div>
+                                        <div class="ve-cell" style="--val: 0.25"><span>99</span></div>
+                                        <div class="ve-cell" style="--val: 0.4"><span>101</span></div>
+                                        <div class="ve-cell" style="--val: 0.55"><span>103</span></div>
+                                        <div class="ve-cell" style="--val: 0.7"><span>105</span></div>
+                                        <div class="ve-cell" style="--val: 0.85"><span>107</span></div>
+                                        <div class="ve-cell highlight" style="--val: 1.0"><span>109</span></div>
+                                        <div class="ve-cell" style="--val: 0.2"><span>97</span></div>
+                                        <div class="ve-cell" style="--val: 0.35"><span>100</span></div>
+                                        <div class="ve-cell" style="--val: 0.5"><span>102</span></div>
+                                        <div class="ve-cell" style="--val: 0.65"><span>104</span></div>
+                                        <div class="ve-cell" style="--val: 0.8"><span>106</span></div>
+                                        <div class="ve-cell" style="--val: 0.95"><span>108</span></div>
+                                        <div class="ve-cell" style="--val: 0.9"><span>107</span></div>
+                                        <div class="ve-cell" style="--val: 0.3"><span>99</span></div>
+                                        <div class="ve-cell" style="--val: 0.45"><span>101</span></div>
+                                        <div class="ve-cell" style="--val: 0.6"><span>103</span></div>
+                                        <div class="ve-cell" style="--val: 0.75"><span>105</span></div>
+                                        <div class="ve-cell" style="--val: 0.85"><span>106</span></div>
+                                        <div class="ve-cell" style="--val: 0.8"><span>105</span></div>
+                                        <div class="ve-cell" style="--val: 0.7"><span>104</span></div>
+                                        <div class="ve-cell" style="--val: 0.4"><span>100</span></div>
+                                        <div class="ve-cell" style="--val: 0.5"><span>102</span></div>
+                                        <div class="ve-cell" style="--val: 0.6"><span>103</span></div>
+                                        <div class="ve-cell" style="--val: 0.65"><span>104</span></div>
+                                        <div class="ve-cell" style="--val: 0.7"><span>104</span></div>
+                                        <div class="ve-cell" style="--val: 0.65"><span>103</span></div>
+                                        <div class="ve-cell" style="--val: 0.55"><span>102</span></div>
+                                    </div>
+                                    <div class="axis-label x-axis">RPM × 1000</div>
+                                </div>
+                                <div class="color-scale">
+                                    <span>95</span>
+                                    <div class="scale-gradient"></div>
+                                    <span>110</span>
                                 </div>
                             </div>
                             <div class="mockup-gauges">
-                                <div class="gauge">
-                                    <div class="gauge-value">14.2</div>
-                                    <div class="gauge-label">AFR</div>
-                                    <div class="gauge-bar"><div class="gauge-fill" style="width: 70%"></div></div>
-                                </div>
-                                <div class="gauge">
-                                    <div class="gauge-value">4850</div>
-                                    <div class="gauge-label">RPM</div>
-                                    <div class="gauge-bar"><div class="gauge-fill rpm" style="width: 65%"></div></div>
-                                </div>
-                                <div class="gauge">
-                                    <div class="gauge-value">92%</div>
-                                    <div class="gauge-label">VE</div>
-                                    <div class="gauge-bar"><div class="gauge-fill ve" style="width: 92%"></div></div>
+                                <div class="gauge-panel">
+                                    <div class="gauge-header">Live Telemetry</div>
+                                    <div class="gauges-row">
+                                        <div class="gauge">
+                                            <div class="gauge-value">14.2</div>
+                                            <div class="gauge-label">AFR</div>
+                                            <div class="gauge-target">Target: 14.0</div>
+                                            <div class="gauge-bar"><div class="gauge-fill afr" style="width: 85%"></div></div>
+                                        </div>
+                                        <div class="gauge">
+                                            <div class="gauge-value">4,850</div>
+                                            <div class="gauge-label">RPM</div>
+                                            <div class="gauge-target">Redline: 6,200</div>
+                                            <div class="gauge-bar"><div class="gauge-fill rpm" style="width: 78%"></div></div>
+                                        </div>
+                                        <div class="gauge">
+                                            <div class="gauge-value">85.2</div>
+                                            <div class="gauge-label">MAP (kPa)</div>
+                                            <div class="gauge-target">WOT: 101.3</div>
+                                            <div class="gauge-bar"><div class="gauge-fill map" style="width: 84%"></div></div>
+                                        </div>
+                                        <div class="gauge">
+                                            <div class="gauge-value">104.2%</div>
+                                            <div class="gauge-label">VE Corr</div>
+                                            <div class="gauge-target">Base: 100%</div>
+                                            <div class="gauge-bar"><div class="gauge-fill ve" style="width: 92%"></div></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="mockup-footer">
-                        <div class="footer-stat">
-                            <span class="stat-label">Mode:</span>
-                            <span class="stat-value mode-wot">WOT</span>
+                        <div class="footer-left">
+                            <div class="footer-stat">
+                                <span class="stat-label">Mode:</span>
+                                <span class="stat-value mode-wot">WOT</span>
+                            </div>
+                            <div class="footer-stat">
+                                <span class="stat-label">Cylinder:</span>
+                                <span class="stat-value">Front</span>
+                            </div>
                         </div>
-                        <div class="footer-stat">
-                            <span class="stat-label">Confidence:</span>
-                            <span class="stat-value">94%</span>
+                        <div class="footer-center">
+                            <div class="footer-stat">
+                                <span class="stat-label">Confidence:</span>
+                                <span class="stat-value confidence-high">94.2%</span>
+                            </div>
+                            <div class="footer-stat">
+                                <span class="stat-label">Coverage:</span>
+                                <span class="stat-value">78/99 cells</span>
+                            </div>
                         </div>
-                        <div class="footer-stat">
-                            <span class="stat-label">Cells Filled:</span>
-                            <span class="stat-value">78/99</span>
+                        <div class="footer-right">
+                            <div class="recording-indicator">
+                                <span class="rec-dot"></span>
+                                Recording — 00:04:32
+                            </div>
                         </div>
                     </div>
                 </div>
