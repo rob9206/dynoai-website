@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Real-Time Knock Detection | DynoAI</title>
+    <meta name="title" content="Real-Time Knock Detection | DynoAI">
+    <meta name="description" content="Multi-modal monitoring that catches combustion problems before they become expensive damage. Safety and diagnostics beyond lambda with DynoAI's advanced knock detection.">
+    <meta name="keywords" content="knock detection, engine detonation, combustion monitoring, engine safety, pre-ignition detection, DynoAI diagnostics">
+    <meta name="author" content="DynoAI">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://dynoai.com/article-3.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://dynoai.com/article-3.html">
+    <meta property="og:title" content="Real-Time Knock Detection | DynoAI">
+    <meta property="og:description" content="Multi-modal monitoring that catches combustion problems before they become expensive damage. Safety and diagnostics beyond lambda.">
+    <meta property="og:image" content="https://dynoai.com/og-image.png">
+    <meta property="og:site_name" content="DynoAI">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://dynoai.com/article-3.html">
+    <meta name="twitter:title" content="Real-Time Knock Detection | DynoAI">
+    <meta name="twitter:description" content="Multi-modal monitoring that catches combustion problems before they become expensive damage. Safety and diagnostics beyond lambda.">
+    <meta name="twitter:image" content="https://dynoai.com/og-image.png">
+    
+    <!-- Additional Meta -->
+    <meta name="theme-color" content="#3b82f6">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="article-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Article Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Real-Time Knock Detection",
+        "description": "Multi-modal monitoring that catches combustion problems before they become expensive damage. Safety and diagnostics beyond lambda.",
+        "author": {
+            "@type": "Organization",
+            "name": "DynoAI"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "DynoAI",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://dynoai.com/logo.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://dynoai.com/article-3.html"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">DynoAI</a>
+                <div class="nav-links">
+                    <a href="index.html#features">Features</a>
+                    <a href="index.html#articles">Learn More</a>
+                    <a href="index.html#contact" class="cta-button-small">Request Demo</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Content -->
+    <article class="article-page">
+        <div class="container">
+            <header class="article-header">
+                <a href="index.html#articles" class="back-link">← Back to Articles</a>
+                <h1>Real-Time Knock Detection</h1>
+                <p class="article-meta">Technical Deep Dive • 9 min read</p>
+            </header>
+            
+            <div class="article-content">
+                <p class="lead">Engine knock is every tuner's nightmare. A few seconds of undetected detonation can turn a $15,000 engine build into scrap metal. Traditional knock detection methods have significant limitations—DynoAI's multi-modal approach changes the game.</p>
+                
+                <p>Most tuners rely on one of two methods to detect knock: listening with their ears (highly subjective and unreliable at higher RPMs) or watching for AFR lean-outs (a lagging indicator that only appears after damage may have already occurred). Neither method is adequate for modern high-performance tuning.</p>
+                
+                <h2>The Problem With Traditional Detection</h2>
+                
+                <h3>Audio Monitoring Limitations</h3>
+                
+                <p>The human ear can detect knock in certain conditions—the characteristic "pinging" sound that gives detonation its name. But this method has serious limitations:</p>
+                
+                <ul>
+                    <li><strong>Masked by noise:</strong> Dyno fans, exhaust, and general shop noise can mask knock sounds, especially at higher RPMs</li>
+                    <li><strong>Frequency limitations:</strong> Knock frequencies vary with bore size and combustion chamber geometry—some engines knock at frequencies outside comfortable human hearing range</li>
+                    <li><strong>Reaction time:</strong> By the time knock is audible, multiple knock events have already occurred</li>
+                    <li><strong>Subjectivity:</strong> What sounds like knock to one tuner may sound normal to another</li>
+                </ul>
+                
+                <h3>Lambda-Based Detection Limitations</h3>
+                
+                <p>Some tuners watch for sudden AFR lean-outs as a knock indicator. The theory: when knock occurs, combustion efficiency drops, which can manifest as an apparent lean reading. But this method has critical flaws:</p>
+                
+                <ul>
+                    <li><strong>Lagging indicator:</strong> Lambda sensors have inherent latency—by the time the reading changes, the knock event is long over</li>
+                    <li><strong>Ambiguous signal:</strong> Many conditions can cause AFR variation; lean-outs aren't specific to knock</li>
+                    <li><strong>Type confusion:</strong> Can't distinguish between detonation, pre-ignition, and other combustion anomalies</li>
+                </ul>
+                
+                <h2>DynoAI's Multi-Modal Approach</h2>
+                
+                <p>DynoAI uses a fundamentally different approach: instead of relying on a single indicator, we analyze multiple data streams simultaneously and use machine learning to identify knock signatures with high confidence. Here's how each modality contributes:</p>
+                
+                <h3>High-Speed Audio Analysis</h3>
+                
+                <p>We employ professional-grade audio sensors coupled with real-time spectral analysis. This isn't just listening—it's precise frequency-domain processing:</p>
+                
+                <ul>
+                    <li><strong>44.1 kHz sampling:</strong> Captures knock frequencies across all common bore sizes (typically 6-15 kHz)</li>
+                    <li><strong>Real-time FFT processing:</strong> Converts audio into frequency components every few milliseconds</li>
+                    <li><strong>Pattern recognition:</strong> Distinguishes knock signatures from mechanical noise, exhaust pulses, and other sources</li>
+                    <li><strong>Cylinder-specific isolation:</strong> Can identify which cylinder is experiencing problems</li>
+                </ul>
+                
+                <h3>Combustion Pressure Correlation</h3>
+                
+                <p>Through partnership with in-cylinder pressure transducer manufacturers, DynoAI can integrate direct combustion pressure data when available. This provides:</p>
+                
+                <ul>
+                    <li><strong>Absolute confirmation:</strong> Pressure oscillations after TDC are definitive knock indicators</li>
+                    <li><strong>Severity quantification:</strong> Pressure data tells us not just if knock is occurring, but how severe</li>
+                    <li><strong>Timing precision:</strong> Exact crank angle of knock onset helps diagnose root causes</li>
+                </ul>
+                
+                <h3>Exhaust Temperature Monitoring</h3>
+                
+                <p>EGT sensors provide another knock detection modality. Abnormal combustion events affect exhaust temperature in predictable ways:</p>
+                
+                <ul>
+                    <li><strong>Temperature spikes:</strong> Pre-ignition events generate distinctive EGT patterns</li>
+                    <li><strong>Cylinder-to-cylinder comparison:</strong> Knock in one cylinder shows as temperature deviation from others</li>
+                    <li><strong>Trend analysis:</strong> Gradual EGT increases can indicate developing problems before knock begins</li>
+                </ul>
+                
+                <h3>AFR Pattern Analysis</h3>
+                
+                <p>While lambda alone isn't sufficient for knock detection, it provides valuable correlation data when combined with other streams:</p>
+                
+                <ul>
+                    <li><strong>Lean spike correlation:</strong> AFR changes that coincide with audio knock signatures increase confidence</li>
+                    <li><strong>Exclusion criteria:</strong> Stable AFR during a suspected knock event helps rule out false positives</li>
+                    <li><strong>Root cause identification:</strong> Lean conditions that precede knock help distinguish fueling-induced detonation</li>
+                </ul>
+                
+                <h2>Machine Learning Fusion</h2>
+                
+                <p>The real power comes from combining these modalities through trained neural networks. Our models have been trained on thousands of verified knock events across diverse engine configurations:</p>
+                
+                <ul>
+                    <li><strong>Confirmed knock events:</strong> Verified through in-cylinder pressure data</li>
+                    <li><strong>Near-knock conditions:</strong> The boundary zone where combustion is at risk</li>
+                    <li><strong>False positive examples:</strong> Normal conditions that resemble knock on individual sensors</li>
+                </ul>
+                
+                <p>This training allows DynoAI to identify knock with high sensitivity (catching real events) while maintaining high specificity (avoiding false alarms). The system learns what knock looks like on your specific engine configuration, adapting its detection thresholds to minimize both missed detections and false positives.</p>
+                
+                <h2>Beyond Detection: Intelligent Response</h2>
+                
+                <p>Detecting knock is only half the battle. DynoAI provides actionable intelligence when knock is detected:</p>
+                
+                <h3>Immediate Alerts</h3>
+                
+                <p>Visual and audible warnings that can't be missed, with severity levels:</p>
+                
+                <ul>
+                    <li><strong>Yellow alert:</strong> Borderline conditions detected—recommend backing off timing</li>
+                    <li><strong>Red alert:</strong> Definite knock detected—immediate attention required</li>
+                    <li><strong>Critical:</strong> Sustained or severe knock—pull recommendation to protect engine</li>
+                </ul>
+                
+                <h3>Diagnostic Context</h3>
+                
+                <p>When knock occurs, DynoAI doesn't just say "knock detected." It provides context:</p>
+                
+                <ul>
+                    <li>Which cylinder(s) are affected</li>
+                    <li>What operating conditions triggered it (RPM, load, timing)</li>
+                    <li>Likely contributing factors (timing too aggressive? Fuel quality? Temperature?)</li>
+                    <li>Recommended corrective actions</li>
+                </ul>
+                
+                <h3>Historical Tracking</h3>
+                
+                <p>Every knock event is logged with full context. Over time, this builds a picture of your engine's knock boundaries:</p>
+                
+                <ul>
+                    <li><strong>Knock maps:</strong> Visualize where in the operating envelope knock occurs</li>
+                    <li><strong>Trend analysis:</strong> Identify if knock sensitivity is changing over time</li>
+                    <li><strong>Safe zone definition:</strong> Establish conservative operating limits based on actual data</li>
+                </ul>
+                
+                <h2>Safety and Confidence</h2>
+                
+                <p>The bottom line: DynoAI's multi-modal knock detection lets tuners push harder with confidence. When you know you have reliable knock detection:</p>
+                
+                <ul>
+                    <li><strong>More aggressive initial timing:</strong> Start closer to the edge because you'll catch knock before damage</li>
+                    <li><strong>Faster optimization:</strong> Know immediately when you've found the knock limit</li>
+                    <li><strong>Customer protection:</strong> Ensure delivered tunes have appropriate safety margins</li>
+                    <li><strong>Documentation:</strong> Provide customers with proof that their engine was tuned within safe limits</li>
+                </ul>
+                
+                <p>In an era where forced induction and race fuel have pushed performance levels to new heights, reliable knock detection isn't optional—it's essential. DynoAI provides that reliability through technology that goes far beyond what human senses can achieve.</p>
+            </div>
+            
+            <!-- Article Navigation -->
+            <nav class="article-navigation">
+                <a href="article-2.html" class="prev-article">
+                    <span class="nav-label">Previous Article</span>
+                    <span class="nav-title">The Mathematics of One-Pull Baseline</span>
+                </a>
+                <a href="index.html#articles" class="next-article">
+                    <span class="nav-label">Back to</span>
+                    <span class="nav-title">All Articles</span>
+                </a>
+            </nav>
+        </div>
+    </article>
+
+    <!-- CTA Section -->
+    <section class="article-cta">
+        <div class="container">
+            <h2>Protect Your Engine Builds</h2>
+            <p>Experience multi-modal knock detection in action</p>
+            <a href="index.html#contact" class="cta-button">Request a Demo</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>DynoAI</h4>
+                    <p>Intelligent tuning software for all EFI systems</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Learn</h4>
+                    <a href="index.html#articles">Technical Articles</a>
+                    <a href="index.html#features">Features</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Utica, NY</p>
+                    <a href="mailto:info@dynoai.com">info@dynoai.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 DynoAI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

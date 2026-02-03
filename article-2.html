@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>The Mathematics of One-Pull Baseline | DynoAI</title>
+    <meta name="title" content="The Mathematics of One-Pull Baseline | DynoAI">
+    <meta name="description" content="Learn how DynoAI uses a single WOT sweep to understand your engine's behavior and calculate optimal VE tables across the entire map using advanced algorithms.">
+    <meta name="keywords" content="One-Pull Baseline, VE table calculation, WOT sweep, engine tuning algorithm, DynoAI technology, EFI optimization">
+    <meta name="author" content="DynoAI">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://dynoai.com/article-2.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://dynoai.com/article-2.html">
+    <meta property="og:title" content="The Mathematics of One-Pull Baseline | DynoAI">
+    <meta property="og:description" content="Learn how DynoAI uses a single WOT sweep to understand your engine's behavior and calculate optimal VE tables across the entire map.">
+    <meta property="og:image" content="https://dynoai.com/og-image.png">
+    <meta property="og:site_name" content="DynoAI">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://dynoai.com/article-2.html">
+    <meta name="twitter:title" content="The Mathematics of One-Pull Baseline | DynoAI">
+    <meta name="twitter:description" content="Learn how DynoAI uses a single WOT sweep to understand your engine's behavior and calculate optimal VE tables across the entire map.">
+    <meta name="twitter:image" content="https://dynoai.com/og-image.png">
+    
+    <!-- Additional Meta -->
+    <meta name="theme-color" content="#3b82f6">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="article-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Article Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "The Mathematics of One-Pull Baseline",
+        "description": "Learn how DynoAI uses a single WOT sweep to understand your engine's behavior and calculate optimal VE tables across the entire map.",
+        "author": {
+            "@type": "Organization",
+            "name": "DynoAI"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "DynoAI",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://dynoai.com/logo.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://dynoai.com/article-2.html"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">DynoAI</a>
+                <div class="nav-links">
+                    <a href="index.html#features">Features</a>
+                    <a href="index.html#articles">Learn More</a>
+                    <a href="index.html#contact" class="cta-button-small">Request Demo</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Content -->
+    <article class="article-page">
+        <div class="container">
+            <header class="article-header">
+                <a href="index.html#articles" class="back-link">← Back to Articles</a>
+                <h1>The Mathematics of One-Pull Baseline</h1>
+                <p class="article-meta">Technical Deep Dive • 10 min read</p>
+            </header>
+            
+            <div class="article-content">
+                <p class="lead">The claim sounds almost too good to be true: generate an accurate baseline VE table from a single WOT pull. But behind this capability lies sophisticated mathematics and machine learning models trained on thousands of engine combinations. Here's how it works.</p>
+                
+                <p>Traditional VE tuning treats each cell in the table as an independent variable that must be measured and adjusted separately. This cell-by-cell approach is why baseline tunes require 15-20 pulls—you're essentially populating a 2D lookup table one row at a time.</p>
+                
+                <p>DynoAI takes a fundamentally different approach. Instead of treating VE values as independent data points, we model them as outputs of underlying physical processes that follow predictable mathematical relationships.</p>
+                
+                <h2>Understanding VE Fundamentals</h2>
+                
+                <p>Volumetric Efficiency represents the ratio of actual air mass drawn into a cylinder versus its theoretical maximum capacity. This isn't a random value—it's determined by physical factors that interact in predictable ways:</p>
+                
+                <ul>
+                    <li><strong>Port geometry:</strong> The shape, length, and diameter of intake runners create resonance effects that vary with RPM</li>
+                    <li><strong>Valve timing:</strong> Intake and exhaust valve events create pressure waves that enhance or diminish cylinder filling</li>
+                    <li><strong>Cam profile:</strong> Duration and lift curves determine how airflow develops at different engine speeds</li>
+                    <li><strong>Compression ratio:</strong> Affects residual exhaust gases and effective displacement</li>
+                </ul>
+                
+                <p>These factors combine to create what engineers call the VE "surface"—a smooth, continuous function that varies with RPM and load. The key insight: this surface has mathematical properties that allow us to infer the whole from observing a part.</p>
+                
+                <h2>The Physics of a WOT Sweep</h2>
+                
+                <p>During a wide-open throttle pull, the engine traverses a specific path through its operating envelope—maximum load at varying RPM. This single trajectory through the VE surface contains an enormous amount of information:</p>
+                
+                <h3>Data Density</h3>
+                
+                <p>At 100 Hz sampling rate over a 6-second pull from 2,000 to 6,000 RPM, we capture 600 data points. Each point includes AFR, RPM, MAP, timing, exhaust temperature, and calculated torque. This density of information reveals patterns invisible in traditional pull-by-pull analysis.</p>
+                
+                <h3>Derivative Information</h3>
+                
+                <p>Beyond the raw values, DynoAI analyzes the rates of change. How quickly does VE transition as RPM increases? Where are the inflection points? These derivatives encode information about the engine's physical characteristics—information that can be extrapolated to other operating regions.</p>
+                
+                <h3>Resonance Signatures</h3>
+                
+                <p>Every engine exhibits characteristic resonance peaks and valleys in its VE curve. These signatures are functions of intake and exhaust geometry. Once identified in the WOT sweep, they can be projected across the entire load range with appropriate scaling.</p>
+                
+                <h2>The Mathematical Model</h2>
+                
+                <p>DynoAI uses a multi-layered approach to generate the complete VE surface from WOT data:</p>
+                
+                <h3>Layer 1: Physical Modeling</h3>
+                
+                <p>We start with physics-based equations that describe how VE should behave based on fundamental principles. These equations incorporate:</p>
+                
+                <ul>
+                    <li>Ideal gas law relationships for air density variation</li>
+                    <li>Wave dynamics equations for intake and exhaust resonance</li>
+                    <li>Throttle body flow equations for part-throttle interpolation</li>
+                    <li>Heat transfer models for charge temperature effects</li>
+                </ul>
+                
+                <h3>Layer 2: Machine Learning Refinement</h3>
+                
+                <p>Pure physics gets us close, but real engines have complexities that defy simple equations. Our machine learning models—trained on thousands of actual dyno sessions across diverse engine configurations—learn the patterns that physics alone can't capture.</p>
+                
+                <p>These models recognize signatures: "This VE curve shape typically belongs to a twin-cam engine with aggressive cam timing" or "This resonance peak frequency suggests a long-runner intake manifold." This pattern recognition allows for intelligent extrapolation beyond the measured data.</p>
+                
+                <h3>Layer 3: Iterative Convergence</h3>
+                
+                <p>The initial calculation is just the starting point. DynoAI continuously refines its model as additional data comes in. Even during the baseline pull itself, the system is updating its predictions in real-time, converging toward an increasingly accurate VE surface.</p>
+                
+                <h2>Accuracy Validation</h2>
+                
+                <p>The proof is in the results. When we compare DynoAI's one-pull baseline to traditional multi-pull methods, we consistently see:</p>
+                
+                <ul>
+                    <li><strong>Average error under 2%</strong> across the measurable VE range</li>
+                    <li><strong>Maximum error under 4%</strong> at edge cases</li>
+                    <li><strong>Correct identification</strong> of resonance peaks and valleys</li>
+                    <li><strong>Appropriate part-throttle scaling</strong> that matches subsequent verification pulls</li>
+                </ul>
+                
+                <p>These accuracy levels match or exceed what typical multi-pull methods achieve, while requiring 75-85% less dyno time.</p>
+                
+                <h2>Why This Matters</h2>
+                
+                <p>The One-Pull Baseline isn't just about speed—though cutting baseline time from hours to minutes has obvious business value. It's about what becomes possible when the baseline isn't the bottleneck:</p>
+                
+                <ul>
+                    <li><strong>More time for optimization:</strong> With baseline done in one pull, you can invest remaining time in fine-tuning for maximum performance</li>
+                    <li><strong>Faster iteration:</strong> Test hypotheses quickly—if a cam swap doesn't perform as expected, you'll know in minutes, not hours</li>
+                    <li><strong>Reduced engine stress:</strong> Fewer pulls means less heat cycling and mechanical wear during the tuning process</li>
+                    <li><strong>Better diagnostics:</strong> When the VE table is accurate from the start, anomalies in subsequent pulls are immediately recognizable as actual problems rather than baseline errors</li>
+                </ul>
+                
+                <h2>The Continuous Learning Advantage</h2>
+                
+                <p>Every tune performed with DynoAI contributes anonymized data back to our models. This means the system continuously improves—learning from edge cases, unusual configurations, and new engine combinations. The one-pull baseline that was 95% accurate last year is 97% accurate today, and will be even better tomorrow.</p>
+                
+                <p>This is the power of combining physical understanding with machine learning: a system that respects the laws of physics while learning the subtle patterns that make each engine unique.</p>
+                
+                <p>In our next article, we explore another critical DynoAI capability: real-time knock detection and how multi-modal analysis catches combustion problems before they become expensive damage.</p>
+            </div>
+            
+            <!-- Article Navigation -->
+            <nav class="article-navigation">
+                <a href="article-1.html" class="prev-article">
+                    <span class="nav-label">Previous Article</span>
+                    <span class="nav-title">Why VE Tuning Takes So Long</span>
+                </a>
+                <a href="article-3.html" class="next-article">
+                    <span class="nav-label">Next Article</span>
+                    <span class="nav-title">Real-Time Knock Detection</span>
+                </a>
+            </nav>
+        </div>
+    </article>
+
+    <!-- CTA Section -->
+    <section class="article-cta">
+        <div class="container">
+            <h2>Experience One-Pull Baseline</h2>
+            <p>See the mathematics in action with a live demonstration</p>
+            <a href="index.html#contact" class="cta-button">Request a Demo</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>DynoAI</h4>
+                    <p>Intelligent tuning software for all EFI systems</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Learn</h4>
+                    <a href="index.html#articles">Technical Articles</a>
+                    <a href="index.html#features">Features</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Utica, NY</p>
+                    <a href="mailto:info@dynoai.com">info@dynoai.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 DynoAI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
