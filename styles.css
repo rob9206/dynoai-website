@@ -1140,7 +1140,7 @@ body {
     font-size: 17px;
 }
 
-.social-proof-card h3 {
+.social-proof-source {
     color: var(--primary);
     font-size: 14px;
     text-transform: uppercase;
