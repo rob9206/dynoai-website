@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Twitter Card meta tags for Twitter sharing
 - JSON-LD structured data (SoftwareApplication, Organization schemas)
 - Apple mobile web app meta tags
-- Favicon link placeholders
+- Favicon and app icons
 
 ## [1.0.0] - 2026-01-29
 
