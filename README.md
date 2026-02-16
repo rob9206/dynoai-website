@@ -1,9 +1,12 @@
 # DynoAI Landing Page
 
+[![Deploy to GitHub Pages](https://github.com/rob9206/dynoai-website/actions/workflows/deploy.yml/badge.svg)](https://github.com/rob9206/dynoai-website/actions/workflows/deploy.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
+🌐 **Live Site**: [https://rob9206.github.io/dynoai-website/](https://rob9206.github.io/dynoai-website/)
 
 The official landing page for **DynoAI** — AI-powered dyno software that transforms EFI tuning.
 
