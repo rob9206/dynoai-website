@@ -1107,6 +1107,156 @@ body {
     font-weight: 500;
 }
 
+/* Social Proof Section */
+.social-proof {
+    padding: var(--section-padding);
+    background: var(--dark-light);
+}
+
+.social-proof-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.social-proof-card {
+    background: var(--dark-lighter);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 36px;
+    border-radius: 4px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    transition: var(--transition);
+}
+
+.social-proof-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255, 106, 0, 0.4);
+}
+
+.social-proof-card p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+    margin-bottom: 18px;
+    font-size: 17px;
+}
+
+.social-proof-source {
+    color: var(--primary);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Pricing Section */
+.pricing {
+    padding: var(--section-padding);
+    background: var(--dark);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin-bottom: 40px;
+}
+
+.pricing-card {
+    background: var(--dark-lighter);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    padding: 40px;
+}
+
+.pricing-card h3 {
+    font-size: 30px;
+    margin-bottom: 14px;
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+}
+
+.pricing-value {
+    color: var(--primary);
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 18px;
+}
+
+.pricing-value span {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+}
+
+.pricing-card ul {
+    list-style: none;
+}
+
+.pricing-card li {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.pricing-card li::before {
+    content: "✓";
+    color: var(--success);
+    position: absolute;
+    left: 0;
+}
+
+/* ROI Calculator */
+.roi-calculator {
+    background: linear-gradient(135deg, rgba(255, 106, 0, 0.15), rgba(255, 149, 0, 0.2));
+    border: 1px solid rgba(255, 106, 0, 0.35);
+    border-radius: 4px;
+    padding: 40px;
+}
+
+.roi-calculator h3 {
+    margin-bottom: 24px;
+    font-size: 34px;
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+}
+
+.roi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.roi-grid label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85);
+    gap: 8px;
+}
+
+.roi-grid input {
+    padding: 12px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--white);
+    font-family: var(--font-main);
+}
+
+.roi-grid input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.roi-result {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--white);
+}
+
 /* CTA Section */
 .cta-section {
     padding: var(--section-padding);
@@ -1283,7 +1433,9 @@ body {
     }
     
     .article-grid,
-    .features-grid {
+    .features-grid,
+    .social-proof-grid,
+    .pricing-grid {
         grid-template-columns: 1fr;
     }
     
@@ -1291,6 +1443,10 @@ body {
     .results-grid {
         grid-template-columns: 1fr;
         max-width: 400px;
+    }
+
+    .roi-grid {
+        grid-template-columns: 1fr;
     }
     
     .footer-content {
@@ -1363,6 +1519,14 @@ body {
     .article-card,
     .feature-card {
         padding: 32px;
+    }
+
+    .roi-calculator {
+        padding: 28px;
+    }
+
+    .roi-result {
+        font-size: 20px;
     }
 }
 

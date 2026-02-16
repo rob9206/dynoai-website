@@ -117,6 +117,7 @@
                 <div class="nav-links">
                     <a href="#features">Features</a>
                     <a href="#results">Results</a>
+                    <a href="#pricing">Pricing</a>
                     <a href="#articles">Learn More</a>
                     <a href="#contact" class="cta-button-small">Book a Demo</a>
                 </div>
@@ -451,6 +452,72 @@
         </div>
     </section>
 
+    <!-- Social Proof Section -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="section-header">
+                <h2>Trusted by Performance Shops</h2>
+            </div>
+            <div class="social-proof-grid">
+                <article class="social-proof-card">
+                    <p>“We cut baseline tuning time by more than half and now fit two extra bikes into the same day.”</p>
+                    <p class="social-proof-source">Lead Tuner · Northeast V-Twin</p>
+                </article>
+                <article class="social-proof-card">
+                    <p>“DynoAI helped standardize results across our team. Newer techs get confident, repeatable tunes faster.”</p>
+                    <p class="social-proof-source">Shop Owner · Redline Performance</p>
+                </article>
+                <article class="social-proof-card">
+                    <p>“The software paid for itself quickly from reduced dyno hours and higher weekly throughput.”</p>
+                    <p class="social-proof-source">Master Calibrator · Ironhorse Speed Lab</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing & ROI Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple Pricing That Scales With Your Shop</h2>
+            </div>
+            <div class="pricing-grid">
+                <article class="pricing-card">
+                    <h3>Professional</h3>
+                    <p class="pricing-value">$299<span>/month</span></p>
+                    <ul>
+                        <li>Unlimited tuning sessions</li>
+                        <li>One-Pull Baseline™ workflow</li>
+                        <li>Real-time knock detection</li>
+                        <li>Automated customer reports</li>
+                    </ul>
+                </article>
+                <article class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <p class="pricing-value">$799<span>/month</span></p>
+                    <ul>
+                        <li>Everything in Professional</li>
+                        <li>Multi-dyno + multi-location support</li>
+                        <li>Dedicated onboarding support</li>
+                        <li>Priority roadmap input</li>
+                    </ul>
+                </article>
+            </div>
+            <div class="roi-calculator">
+                <h3>ROI Calculator</h3>
+                <div class="roi-grid">
+                    <label for="roi-tunes"><span>Tunes / month</span><input id="roi-tunes" type="number" min="1" value="24"></label>
+                    <label for="roi-hours"><span>Hours saved per tune</span><input id="roi-hours" type="number" min="0" step="0.5" value="2.5"></label>
+                    <label for="roi-rate"><span>Dyno labor rate ($/hr)</span><input id="roi-rate" type="number" min="0" value="150"></label>
+                    <label for="roi-extra"><span>Extra tunes / month</span><input id="roi-extra" type="number" min="0" value="8"></label>
+                    <label for="roi-revenue"><span>Average revenue per tune ($)</span><input id="roi-revenue" type="number" min="0" value="500"></label>
+                    <label for="roi-cost"><span>Software cost ($/month)</span><input id="roi-cost" type="number" min="0" value="299"></label>
+                </div>
+                <p id="roi-result" class="roi-result" aria-live="polite"></p>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section id="contact" class="cta-section">
         <div class="container">
@@ -483,6 +550,7 @@
                     <a href="#articles">Technical Articles</a>
                     <a href="#features">Features</a>
                     <a href="#results">Results</a>
+                    <a href="#pricing">Pricing</a>
                 </div>
                 <div class="footer-section">
                     <h4>Contact</h4>
@@ -495,5 +563,42 @@
             </div>
         </div>
     </footer>
+    <script>
+        const roiIds = ["roi-tunes", "roi-hours", "roi-rate", "roi-extra", "roi-revenue", "roi-cost"];
+        const roiResult = document.getElementById("roi-result");
+
+        function roiValue(id) {
+            const input = document.getElementById(id);
+            const parsed = Number(input.value);
+            const min = Number(input.min || 0);
+            if (!Number.isFinite(parsed)) {
+                return min;
+            }
+            return Math.max(min, parsed);
+        }
+
+        function updateRoi() {
+            const tunes = roiValue("roi-tunes");
+            const hoursSaved = roiValue("roi-hours");
+            const laborRate = roiValue("roi-rate");
+            const extraTunes = roiValue("roi-extra");
+            const revenuePerTune = roiValue("roi-revenue");
+            const monthlyCost = roiValue("roi-cost");
+
+            const monthlyTimeValue = tunes * hoursSaved * laborRate;
+            const monthlyExtraRevenue = extraTunes * revenuePerTune;
+            const netMonthlyGain = monthlyTimeValue + monthlyExtraRevenue - monthlyCost;
+
+            const rounded = Math.round(Math.abs(netMonthlyGain)).toLocaleString();
+            roiResult.textContent = netMonthlyGain >= 0
+                ? `Estimated monthly net gain: $${rounded}`
+                : `Estimated monthly net loss: $${rounded}`;
+        }
+
+        roiIds.forEach((id) => {
+            document.getElementById(id).addEventListener("input", updateRoi);
+        });
+        updateRoi();
+    </script>
 </body>
 </html>
