@@ -4,7 +4,7 @@ First off, thank you for considering contributing to DynoAI! It's people like yo
 
 ## Code of Conduct
 
-This project and everyone participating in it is governed by the [DynoAI Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to info@dynoai.com.
+This project and everyone participating in it is governed by the [DynoAI Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to info@thunderhorsetuning.com.
 
 ## How Can I Contribute?
 
@@ -110,7 +110,7 @@ Before submitting a pull request:
 
 ## Questions?
 
-Feel free to reach out at info@dynoai.com if you have any questions about contributing.
+Feel free to reach out at info@thunderhorsetuning.com if you have any questions about contributing.
 
 ## License
 

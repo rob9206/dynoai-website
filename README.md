@@ -108,7 +108,7 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 ## Contact
 
 - **Website**: [dynoai.com](https://dynoai.com)
-- **Email**: info@dynoai.com
+- **Email**: info@thunderhorsetuning.com
 - **Location**: Utica, NY
 
 ---
