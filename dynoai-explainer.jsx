@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+const { useState, useEffect, useRef, useCallback } = React;
 
 const SECTIONS = [
   { id: "overview", label: "Overview", icon: "⚡" },
@@ -598,7 +598,7 @@ function EngineCards() {
 }
 
 /* ═══════════════════ MAIN APP ═══════════════════ */
-export default function DynoAIExplainer() {
+function DynoAIExplainer() {
   const [section, setSection] = useState("overview");
 
   const content = {
@@ -858,22 +858,32 @@ export default function DynoAIExplainer() {
           backgroundSize: "40px 40px",
         }} />
         <div style={{ maxWidth: 780, margin: "0 auto", position: "relative" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-            <div style={{
-              width: 48, height: 48, borderRadius: 12,
-              background: "linear-gradient(135deg, #ff3b4e, #cc2233)",
-              display: "flex", alignItems: "center", justifyContent: "center",
-              fontFamily: "'Barlow Condensed', sans-serif", fontSize: 24, fontWeight: 900, color: "#fff",
-              boxShadow: "0 0 30px rgba(255,59,78,0.3), inset 0 1px 0 rgba(255,255,255,0.2)",
-            }}>D</div>
-            <div>
-              <h1 style={{ margin: 0, fontSize: 26, fontWeight: 900, fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: 1 }}>
-                DYNO<span style={{ color: "#ff3b4e" }}>AI</span>
-              </h1>
-              <div style={{ fontSize: 10, color: "rgba(255,255,255,0.3)", fontWeight: 700, letterSpacing: 3, fontFamily: "'Barlow Condensed', sans-serif" }}>
-                BY THUNDERHORSE TUNING
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+              <a href="index.html" style={{
+                width: 48, height: 48, borderRadius: 12,
+                background: "linear-gradient(135deg, #ff3b4e, #cc2233)",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                fontFamily: "'Barlow Condensed', sans-serif", fontSize: 24, fontWeight: 900, color: "#fff",
+                boxShadow: "0 0 30px rgba(255,59,78,0.3), inset 0 1px 0 rgba(255,255,255,0.2)",
+                textDecoration: "none",
+              }}>D</a>
+              <div>
+                <h1 style={{ margin: 0, fontSize: 26, fontWeight: 900, fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: 1 }}>
+                  DYNO<span style={{ color: "#ff3b4e" }}>AI</span>
+                </h1>
+                <div style={{ fontSize: 10, color: "rgba(255,255,255,0.3)", fontWeight: 700, letterSpacing: 3, fontFamily: "'Barlow Condensed', sans-serif" }}>
+                  BY THUNDERHORSE TUNING
+                </div>
               </div>
             </div>
+            <a href="index.html" style={{
+              color: "rgba(255,255,255,0.4)", fontSize: 12, fontWeight: 600,
+              textDecoration: "none", fontFamily: "'Barlow Condensed', sans-serif",
+              letterSpacing: 1, padding: "8px 16px", borderRadius: 8,
+              border: "1px solid rgba(255,255,255,0.08)",
+              transition: "all 0.3s ease",
+            }}>← BACK TO HOME</a>
           </div>
           <p style={{ color: "rgba(255,255,255,0.3)", fontSize: 13, margin: "14px 0 0", lineHeight: 1.5 }}>
             AI-powered calibration that learns, corrects, and protects — from V-twins to turbo diesels and everything in between.

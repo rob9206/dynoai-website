@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>How DynoAI Works — Deep Dive | DynoAI</title>
+    <meta name="title" content="How DynoAI Works — Deep Dive | DynoAI">
+    <meta name="description" content="Explore how DynoAI's AI-powered calibration works — from one-pull baselines to real-time safety, across V-twins, diesels, sport bikes, cars, and powersports.">
+    <meta name="keywords" content="DynoAI, EFI tuning, AI calibration, VE correction, knock detection, engine tuning, dyno software, Harley tuning, diesel tuning">
+    <meta name="author" content="DynoAI">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://dynoai.com/explainer.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dynoai.com/explainer.html">
+    <meta property="og:title" content="How DynoAI Works — Deep Dive | DynoAI">
+    <meta property="og:description" content="Explore how DynoAI's AI-powered calibration works — from one-pull baselines to real-time safety, across V-twins, diesels, sport bikes, cars, and powersports.">
+    <meta property="og:image" content="https://dynoai.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="DynoAI">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://dynoai.com/explainer.html">
+    <meta name="twitter:title" content="How DynoAI Works — Deep Dive | DynoAI">
+    <meta name="twitter:description" content="Explore how DynoAI's AI-powered calibration works — from one-pull baselines to real-time safety, across V-twins, diesels, sport bikes, cars, and powersports.">
+    <meta name="twitter:image" content="https://dynoai.com/og-image.png">
+
+    <!-- Additional Meta -->
+    <meta name="theme-color" content="#ff6a00">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="DynoAI">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <!-- React (production) -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+    <!-- Babel standalone for JSX transpilation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { height: 100%; background: #08080e; }
+        #root { min-height: 100%; }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel" src="dynoai-explainer.jsx"></script>
+    <script type="text/babel">
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(React.createElement(DynoAIExplainer));
+    </script>
+</body>
+</html>
